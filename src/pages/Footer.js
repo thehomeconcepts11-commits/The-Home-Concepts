@@ -37,15 +37,17 @@ const Footer = () => {
 
   const address = "First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh";
 
+  const goToProducts = () => {
+    setOpenIndex(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/products");
+  };
+
   const mobileSections = useMemo(
     () => [
       { title: "Quick Links", type: "links", items: quickLinks },
       { title: "Services", type: "text", items: services },
-      {
-        title: "Products",
-        type: "products",
-        items: products
-      },
+      { title: "Products", type: "products", items: products },
       {
         title: "Contact",
         type: "contact",
@@ -62,12 +64,6 @@ const Footer = () => {
     ],
     [address, quickLinks, services, products]
   );
-
-  const goToProducts = () => {
-    setOpenIndex(null);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate("/products");
-  };
 
   return (
     <footer className="footer">
@@ -106,8 +102,6 @@ const Footer = () => {
                 <span>{address}</span>
               </a>
             </div>
-
-           
           </div>
 
           <div className="footer-col">
@@ -143,6 +137,9 @@ const Footer = () => {
                 </li>
               ))}
               <li>
+                <button type="button" className="footer-btn footer-more" onClick={goToProducts}>
+                  More
+                </button>
               </li>
             </ul>
           </div>
@@ -164,15 +161,22 @@ const Footer = () => {
               </div>
               <div className="card-accent" />
             </div>
-             <div className="brand-social">
+
+            <div className="brand-social">
               {social.map((s) => (
-                <a key={s.label} className="social-btn" href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+                <a
+                  key={s.label}
+                  className="social-btn"
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={s.label}
+                >
                   {s.icon}
                 </a>
               ))}
             </div>
           </div>
-          
         </div>
 
         <div className="footer-mobile">
@@ -192,7 +196,12 @@ const Footer = () => {
           <div className="mobile-accordion">
             {mobileSections.map((sec, idx) => (
               <div className="acc-sec" key={sec.title}>
-                <button type="button" className="acc-head" onClick={() => toggleSection(idx)} aria-expanded={openIndex === idx}>
+                <button
+                  type="button"
+                  className="acc-head"
+                  onClick={() => toggleSection(idx)}
+                  aria-expanded={openIndex === idx}
+                >
                   <span>{sec.title}</span>
                   <span className="acc-icon">{openIndex === idx ? "−" : "+"}</span>
                 </button>
@@ -228,6 +237,9 @@ const Footer = () => {
                         </li>
                       ))}
                       <li>
+                        <button type="button" className="footer-btn footer-more" onClick={goToProducts}>
+                          More
+                        </button>
                       </li>
                     </ul>
                   )}
@@ -255,7 +267,14 @@ const Footer = () => {
 
           <div className="brand-social mobile-social">
             {social.map((s) => (
-              <a key={s.label} className="social-btn" href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+              <a
+                key={s.label}
+                className="social-btn"
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={s.label}
+              >
                 {s.icon}
               </a>
             ))}
