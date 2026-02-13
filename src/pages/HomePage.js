@@ -3,27 +3,15 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCoverflow } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
 import { FaHome, FaBuilding, FaRegBuilding } from "react-icons/fa";
 
-
-
-const items = [
-  { img: 'slide-show1.jpg' },
-  { img: 'slide-show2.jpg' },
-  { img: 'slide-show3.jpg' },
-  { img: 'slide-show4.jpg' },
-  { img: 'slide-show5.jpg' },
-  { img: 'slide-show6.jpg' },
-  { img: 'slide-show7.jpg' },
-  { img: 'slide-show8.jpg' }
-];
-
 function HomePage() {
-  const slides = Array.from({ length: 8 }, (_, i) => `/Images/slide-show${i + 1}.jpg`);;
+  const slides = Array.from({ length: 8 }, (_, i) => `/Images/slide-show${i + 1}.jpg`);
+
   return (
     <>
       <Navbar />
@@ -48,8 +36,6 @@ function HomePage() {
             </p>
           </div>
         </section>
-
-
 
         <section className="showcase" aria-label="Project highlights">
           <div className="showcase-inner">
@@ -94,10 +80,8 @@ function HomePage() {
           </div>
         </section>
 
-
         <section className="home-section2">
           <h2 className="home-section2-title">Discover Our Finest Home Design Collections</h2>
-
 
           <Swiper
             className="home-section2-slider"
@@ -111,28 +95,23 @@ function HomePage() {
               depth: 200,
               stretch: 0,
               modifier: 1,
-              slideShadows: false
+              slideShadows: false,
             }}
             autoplay={{
               delay: 1700,
               disableOnInteraction: false,
-              pauseOnMouseEnter: false
+              pauseOnMouseEnter: false,
             }}
             speed={1000}
             allowTouchMove={false}
           >
             {slides.map((src, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={src}>
                 <img src={src} alt={`Slide ${index + 1}`} />
               </SwiperSlide>
             ))}
           </Swiper>
-
-
         </section>
-
-
-
 
         <section className="visit-card" aria-label="Visiting card">
           <div className="visit-card-inner">
@@ -173,7 +152,9 @@ function HomePage() {
                   </div>
                   <div className="visit-card-line">
                     <span className="visit-card-label">Location</span>
-                    <span className="visit-card-value">First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam</span>
+                    <span className="visit-card-value">
+                      First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam
+                    </span>
                   </div>
                 </div>
               </div>
@@ -183,14 +164,8 @@ function HomePage() {
                 <div className="visit-card-frame" />
               </div>
             </div>
-
           </div>
         </section>
-
-
-
-
-
 
         <section className="grid-section" aria-label="Highlights grid">
           <div className="grid-wrap">
@@ -217,7 +192,11 @@ function HomePage() {
             </div>
 
             <div className="grid-item grid-title">
-              <h2 className="grid-title-text">The <br />Home <br />Concepts</h2>
+              <h2 className="grid-title-text">
+                The <br />
+                Home <br />
+                Concepts
+              </h2>
             </div>
 
             <div className="grid-item grid-text">
@@ -243,7 +222,6 @@ function HomePage() {
             </div>
           </div>
         </section>
-
 
         <section className="choose" aria-label="Why choose us">
           <div className="choose-inner">
@@ -272,8 +250,12 @@ function HomePage() {
                 <div className="choose-head">
                   <h2 className="choose-title">Why Choose Us</h2>
                   <div className="choose-underline" />
-                  <p className="choose-desc">We focus on clean workmanship and premium finishing. <br />Clear timelines, honest guidance, and smooth coordination.<br />Designed for real home living with lasting value.</p>
-
+                  <p className="choose-desc">
+                    We focus on clean workmanship and premium finishing. <br />
+                    Clear timelines, honest guidance, and smooth coordination.
+                    <br />
+                    Designed for real home living with lasting value.
+                  </p>
                 </div>
 
                 <ul className="choose-points">
@@ -303,11 +285,6 @@ function HomePage() {
           </div>
         </section>
 
-
-
-
-
-
         <section className="theme-band" aria-label="Theme banner">
           <img className="theme-band-img" src="/Images/theme.jpg" alt="The Home Concepts theme" />
 
@@ -328,8 +305,6 @@ function HomePage() {
             <FaRegBuilding />
           </div>
         </section>
-
-
 
         <section className="promise" aria-label="Why choose The Home Concepts">
           <div className="promise-inner">
@@ -423,16 +398,6 @@ function HomePage() {
           </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
         <section className="cta-hero" aria-label="Call to action banner">
           <img className="cta-hero-img" src="/Images/main-banner2.jpg" alt="The Home Concepts banner" />
           <div className="cta-hero-overlay" />
@@ -444,31 +409,23 @@ function HomePage() {
               <Link to="/contact" className="cta-btn">
                 <span>Get in Touch</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43" aria-hidden="true">
-                  <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"></polygon>
-                  <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"></polygon>
-                  <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"></polygon>
+                  <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5" />
+                  <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5" />
+                  <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5" />
                 </svg>
               </Link>
 
               <Link to="/services" className="cta-btn cta-btn-secondary">
                 <span>Explore Services</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 43" aria-hidden="true">
-                  <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5"></polygon>
-                  <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5"></polygon>
-                  <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5"></polygon>
+                  <polygon points="39.58,4.46 44.11,0 66,21.5 44.11,43 39.58,38.54 56.94,21.5" />
+                  <polygon points="19.79,4.46 24.32,0 46.21,21.5 24.32,43 19.79,38.54 37.15,21.5" />
+                  <polygon points="0,4.46 4.53,0 26.42,21.5 4.53,43 0,38.54 17.36,21.5" />
                 </svg>
               </Link>
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
-
       </main>
       <Footer />
     </>
