@@ -10,21 +10,26 @@ import "swiper/css/effect-coverflow";
 import { FaHome, FaBuilding, FaRegBuilding } from "react-icons/fa";
 
 function HomePage() {
-  const slides = Array.from({ length: 8 }, (_, i) => `/Images/slide-show${i + 1}.jpg`);
+  const slides = Array.from({ length: 8 }, (_, i) => `/Images/interior${i + 1}.jpg`);
 
   return (
     <>
       <Navbar />
       <main className="home">
         <section className="hero" aria-label="Main banner">
-          <img className="hero-img" src="/Images/main-banner1.avif" alt="The Home Concepts banner" />
+          <img className="hero-img" src="/Images/main-banner3.jpg" alt="The Home Concepts banner" />
           <div className="hero-overlay" />
           <div className="hero-content">
+            <div className="hero-badge">
+              <img className="hero-logo" src="/Images/main-logo1.png" alt="The Home Concepts logo" />
+            </div>
+
             <h1 className="hero-title">
-              Built for Modern
+              Turning Spaces
               <br />
-              Living Solutions
+              into Experiences
             </h1>
+
             <p className="hero-subtitle">
               Discover modern property solutions
               <br />
@@ -36,6 +41,7 @@ function HomePage() {
             </p>
           </div>
         </section>
+
 
         <section className="showcase" aria-label="Project highlights">
           <div className="showcase-inner">
@@ -107,7 +113,7 @@ function HomePage() {
           >
             {slides.map((src, index) => (
               <SwiperSlide key={src}>
-                <img src={src} alt={`Slide ${index + 1}`} />
+                <img src={src} alt={`interior ${index + 1}`} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -170,7 +176,7 @@ function HomePage() {
         <section className="grid-section" aria-label="Highlights grid">
           <div className="grid-wrap">
             <div className="grid-item grid-media">
-              <img className="grid-img" src="/Images/grid1.jpg" alt="Grid 1" />
+              <img className="grid-img" src="/Images/grid5.jpg" alt="Grid 1" />
             </div>
 
             <div className="grid-item grid-text">
@@ -207,7 +213,7 @@ function HomePage() {
             </div>
 
             <div className="grid-item grid-media">
-              <img className="grid-img" src="/Images/grid3.jpg" alt="Grid 3" />
+              <img className="grid-img" src="/Images/grid6.jpg" alt="Grid 3" />
             </div>
 
             <div className="grid-item grid-text">
@@ -230,16 +236,16 @@ function HomePage() {
                 <div className="choose-mosaic">
                   <div className="choose-col choose-col-split">
                     <div className="choose-media">
-                      <img src="/Images/why-choose1.jpg" alt="Why choose us 1" />
+                      <img src="/Images/why-choose4.jpg" alt="Why choose us 1" />
                     </div>
                     <div className="choose-media">
-                      <img src="/Images/why-choose2.jpg" alt="Why choose us 2" />
+                      <img src="/Images/why-choose5.jpg" alt="Why choose us 2" />
                     </div>
                   </div>
 
                   <div className="choose-col">
                     <div className="choose-media choose-media-tall">
-                      <img src="/Images/why-choose3.jpg" alt="Why choose us 3" />
+                      <img src="/Images/why-choose6.jpg" alt="Why choose us 3" />
                       <div className="choose-tag">Trusted Work</div>
                     </div>
                   </div>

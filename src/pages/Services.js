@@ -21,73 +21,95 @@ function Services() {
 
 
                 {/* Section 2: Foundation & Structure */}
-                <section className="structure" aria-label="Foundation and structure">
+                <section className="structure" aria-label="Products and categories">
                     <div className="structure-inner">
                         <div className="structure-grid">
                             <div className="structure-left">
-                                <h2 className="structure-title">Foundation & Structure</h2>
+                                <h2 className="structure-title">Products</h2>
                                 <div className="structure-underline" />
                                 <p className="structure-lead">
-                                    A strong home starts with a strong base. We plan and execute every structural stage with clean workmanship and
-                                    reliable checks.
+                                    Explore our curated range of interior and decor products. Quality materials, clean finishing, and styles that fit every space.
                                 </p>
 
                                 <div className="structure-points">
                                     <div className="structure-point">
                                         <span className="structure-badge">01</span>
                                         <div className="structure-point-text">
-                                            <div className="structure-point-title">Planning & Layout</div>
-                                            <div className="structure-point-desc">Site measurements, footing layout, and clear execution plan.</div>
+                                            <div className="structure-point-title">Wallpapers</div>
+                                            <div className="structure-point-desc">Modern, classic, and textured designs for every room.</div>
                                         </div>
                                     </div>
 
                                     <div className="structure-point">
                                         <span className="structure-badge">02</span>
                                         <div className="structure-point-text">
-                                            <div className="structure-point-title">Concrete & Reinforcement</div>
-                                            <div className="structure-point-desc">Steel placement and concrete work done with proper standards.</div>
+                                            <div className="structure-point-title">Curtains & Blinds</div>
+                                            <div className="structure-point-desc">Privacy, light control, and premium fabric options.</div>
                                         </div>
                                     </div>
 
                                     <div className="structure-point">
                                         <span className="structure-badge">03</span>
                                         <div className="structure-point-text">
-                                            <div className="structure-point-title">Beam, Slab, Pillar</div>
-                                            <div className="structure-point-desc">Accurate levels, clean edges, and stable structural alignment.</div>
+                                            <div className="structure-point-title">Panels</div>
+                                            <div className="structure-point-desc">PVC panels, ceiling panels, PU panels for stylish finishes.</div>
                                         </div>
                                     </div>
 
                                     <div className="structure-point">
                                         <span className="structure-badge">04</span>
                                         <div className="structure-point-text">
-                                            <div className="structure-point-title">Stage Checks</div>
-                                            <div className="structure-point-desc">Quality inspections at key stages for safety and durability.</div>
+                                            <div className="structure-point-title">Flooring & Tiles</div>
+                                            <div className="structure-point-desc">Mosaic tiles and laminated flooring with durable quality.</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="structure-point">
+                                        <span className="structure-badge">05</span>
+                                        <div className="structure-point-text">
+                                            <div className="structure-point-title">Decor & Utility</div>
+                                            <div className="structure-point-desc">Pots, artifacts, carpets, stools, and more essentials.</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="structure-point">
+                                        <span className="structure-badge">06</span>
+                                        <div className="structure-point-text">
+                                            <div className="structure-point-title">Home Add-ons</div>
+                                            <div className="structure-point-desc">Wall murals, artificial greenary, balcony hangers, mosquito mesh doors, AC partitions.</div>
+                                        </div>
+                                    </div>
+
+                                    <div className="structure-point">
+                                        <span className="structure-badge">07</span>
+                                        <div className="structure-point-text">
+                                            <div className="structure-point-title">Bedsheets & Comforters</div>
+                                            <div className="structure-point-desc">Soft, stylish bedding sets for a fresh and cozy feel.</div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
-                            <div className="structure-right" aria-label="Foundation gallery">
+                            <div className="structure-right" aria-label="Products gallery">
                                 <div className="structure-gallery">
                                     <figure className="structure-card">
-                                        <img src="/Images/s1.jpg" alt="Foundation work 1" />
-                                        <figcaption>Strong base work</figcaption>
+                                        <img src="/Images/s5.jpg" alt="Wallpapers and wall decor" />
+                                        <figcaption>Wallpapers</figcaption>
                                     </figure>
 
                                     <figure className="structure-card">
-                                        <img src="/Images/s2.jpg" alt="Foundation work 2" />
-                                        <figcaption>Clean structure</figcaption>
+                                        <img src="/Images/s6.jpg" alt="Curtains and blinds" />
+                                        <figcaption>Curtains & Blinds</figcaption>
                                     </figure>
 
                                     <figure className="structure-card">
-                                        <img src="/Images/s3.jpg" alt="Foundation work 3" />
-                                        <figcaption>Safe build</figcaption>
+                                        <img src="/Images/s7.jpg" alt="Panels and ceiling work" />
+                                        <figcaption>PVC, Ceiling, PU Panels</figcaption>
                                     </figure>
 
                                     <figure className="structure-card">
-                                        <img src="/Images/s4.jpg" alt="Foundation work 4" />
-                                        <figcaption>Quality finish</figcaption>
+                                        <img src="/Images/s8.jpg" alt="Flooring and tiles" />
+                                        <figcaption>Tiles & Flooring</figcaption>
                                     </figure>
                                 </div>
                             </div>
@@ -96,36 +118,37 @@ function Services() {
                 </section>
 
 
+
                 {/* Section 3: Split Layout - Electrical & Plumbing */}
                 <section className="svcspot" aria-label="Our services spotlight">
                     <div className="svcspot-inner">
                         <div className="svcspot-head">
-                            <h2 className="svcspot-title">Our Home Services</h2>
+                            <h2 className="svcspot-title">Our Product Range</h2>
                             <div className="svcspot-underline" />
                             <p className="svcspot-sub">
-                                From planning to finishing, we deliver complete home works with premium quality and clean detailing.
+                                From walls to floors and decor to utility, explore premium products that make every space feel complete.
                             </p>
                         </div>
 
                         <div className="svcspot-grid">
                             <div className="svcspot-visual">
                                 <div className="svcspot-frame">
-                                    <img src="/Images/theme.jpg" alt="Home service showcase" className="svcspot-mainimg" />
-                                    <div className="svcspot-tag">Complete Home Works</div>
+                                    <img src="/Images/theme.jpg" alt="Product showcase" className="svcspot-mainimg" />
+                                    <div className="svcspot-tag">Premium Home Products</div>
                                 </div>
 
                                 <div className="svcspot-thumbs">
                                     <div className="svcspot-thumb">
-                                        <img src="/Images/slide-show1.jpg" alt="Work preview 1" />
+                                        <img src="/Images/show1.jpg" alt="Product preview 1" />
                                     </div>
                                     <div className="svcspot-thumb">
-                                        <img src="/Images/slide-show2.jpg" alt="Work preview 2" />
+                                        <img src="/Images/show2.jpg" alt="Product preview 2" />
                                     </div>
                                     <div className="svcspot-thumb">
-                                        <img src="/Images/slide-show3.jpg" alt="Work preview 3" />
+                                        <img src="/Images/show3.jpg" alt="Product preview 3" />
                                     </div>
                                     <div className="svcspot-thumb">
-                                        <img src="/Images/slide-show4.jpg" alt="Work preview 4" />
+                                        <img src="/Images/show4.jpg" alt="Product preview 4" />
                                     </div>
                                 </div>
                             </div>
@@ -133,118 +156,114 @@ function Services() {
                             <div className="svcspot-card">
                                 <div className="svcspot-badge">THE HOME CONCEPTS</div>
 
-                                <h3 className="svcspot-cardtitle">End to End Home Solutions</h3>
+                                <h3 className="svcspot-cardtitle">Everything for Your Home, in One Place</h3>
                                 <p className="svcspot-text">
-                                    We handle planning, structure, interiors, and finishing with a smooth process and reliable timelines.
+                                    Choose from trending designs and durable materials, selected to match modern interiors and everyday needs.
                                 </p>
 
                                 <div className="svcspot-list">
                                     <div className="svcspot-item">
                                         <span className="svcspot-dot" />
                                         <div>
-                                            <div className="svcspot-item-title">House Construction</div>
-                                            <div className="svcspot-item-sub">Strong foundation, clean structure, safe build.</div>
+                                            <div className="svcspot-item-title">Wall & Window</div>
+                                            <div className="svcspot-item-sub">Wallpapers, wall murals, curtains, blinds, mosquito mesh doors.</div>
                                         </div>
                                     </div>
 
                                     <div className="svcspot-item">
                                         <span className="svcspot-dot" />
                                         <div>
-                                            <div className="svcspot-item-title">Interior Works</div>
-                                            <div className="svcspot-item-sub">Ceiling panels, wardrobes, modular works, lighting.</div>
+                                            <div className="svcspot-item-title">Panels & Partitions</div>
+                                            <div className="svcspot-item-sub">PVC panels, ceiling panels, PU panels, AC partitions.</div>
                                         </div>
                                     </div>
 
                                     <div className="svcspot-item">
                                         <span className="svcspot-dot" />
                                         <div>
-                                            <div className="svcspot-item-title">Renovation & Repairs</div>
-                                            <div className="svcspot-item-sub">Upgrade spaces with premium finish and neat work.</div>
+                                            <div className="svcspot-item-title">Flooring & Tiles</div>
+                                            <div className="svcspot-item-sub">Mosaic tiles, laminated flooring, carpets for a finished look.</div>
                                         </div>
                                     </div>
 
                                     <div className="svcspot-item">
                                         <span className="svcspot-dot" />
                                         <div>
-                                            <div className="svcspot-item-title">Plan & Elevation</div>
-                                            <div className="svcspot-item-sub">Practical layouts designed for real home living.</div>
+                                            <div className="svcspot-item-title">Decor & Essentials</div>
+                                            <div className="svcspot-item-sub">Artificial greenary, pots, artifacts, stools, bedsheets and comforters, balcony cloth hangers.</div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </section>
+
 
 
 
 
                 {/* Section 4: Interior Design - Modular Kitchen Grid */}
-                <section className="signature" aria-label="Signature spaces">
-                    <div className="signature-inner">
-                        <div className="signature-head">
-                            <h2 className="signature-title">Signature Spaces</h2>
-                            <div className="signature-underline" />
-                            <p className="signature-sub">
-                                A premium look comes from strong planning, clean lines, and a finish that feels calm and complete.
+                <section className="signature-services" aria-label="Featured products">
+                    <div className="signature-inner-services">
+                        <div className="signature-head-services">
+                            <h2 className="signature-title-services">Featured Collections</h2>
+                            <div className="signature-underline-services" />
+                            <p className="signature-sub-services">
+                                Discover trending styles and premium finishes designed to elevate every corner of your home.
                             </p>
                         </div>
 
-                        <div className="signature-grid">
-                            <div className="signature-card signature-a">
-                                <img src="/Images/slide-show1.jpg" alt="Living Room" />
-                                <div className="signature-cap">
-                                    <div className="signature-cap-title">Living Room</div>
-
+                        <div className="signature-grid-services">
+                            <div className="signature-card-services signature-a-services">
+                                <img src="/Images/show9.jpg" alt="Wallpapers and murals" />
+                                <div className="signature-cap-services">
+                                    <div className="signature-cap-title-services">Wallpapers & Murals</div>
                                 </div>
                             </div>
 
-                            <div className="signature-card signature-b">
-                                <img src="/Images/slide-show2.jpg" alt="Bedroom" />
-                                <div className="signature-cap">
-                                    <div className="signature-cap-title">Bedroom</div>
-
+                            <div className="signature-card-services signature-b-services">
+                                <img src="/Images/show8.jpg" alt="Curtains and blinds" />
+                                <div className="signature-cap-services">
+                                    <div className="signature-cap-title-services">Curtains & Blinds</div>
                                 </div>
                             </div>
 
-                            <div className="signature-card signature-c">
-                                <img src="/Images/slide-show3.jpg" alt="Elevation" />
-                                <div className="signature-cap">
-                                    <div className="signature-cap-title">Elevation</div>
+                            <div className="signature-card-services signature-c-services">
+                                <img src="/Images/show7.jpg" alt="Panels and partitions" />
+                                <div className="signature-cap-services">
+                                    <div className="signature-cap-title-services">Panels & Partitions</div>
                                 </div>
                             </div>
 
-                            <div className="signature-card signature-d">
-                                <img src="/Images/slide-show4.jpg" alt="Work Area" />
-                                <div className="signature-cap">
-                                    <div className="signature-cap-title">Work Area</div>
+                            <div className="signature-card-services signature-d-services">
+                                <img src="/Images/show6.jpg" alt="Flooring and carpets" />
+                                <div className="signature-cap-services">
+                                    <div className="signature-cap-title-services">Flooring & Carpets</div>
                                 </div>
                             </div>
 
-                            <div className="signature-copy">
-                                <h3 className="signature-copy-title">Designed for Real Living</h3>
-                                <p className="signature-copy-text">
-                                    We design homes that feel open, balanced, and easy to live in. Every detail is planned for comfort, clean
-                                    finishing, and long-term value.
+                            <div className="signature-copy-services">
+                                <h3 className="signature-copy-title-services">Complete Home Product Range</h3>
+                                <p className="signature-copy-text-services">
+                                    From decor accents to functional essentials, we bring together quality, style, and durability for modern living.
                                 </p>
 
-                                <ul className="signature-points">
-                                    <li><span className="signature-tick" />Balanced layouts with smooth flow</li>
-                                    <li><span className="signature-tick" />Premium materials with clean detailing</li>
-                                    <li><span className="signature-tick" />Lighting and colors that feel calm</li>
-                                    <li><span className="signature-tick" />Smart storage and space usage</li>
+                                <ul className="signature-points-services">
+                                    <li><span className="signature-tick-services" />PVC, Ceiling and PU Panels</li>
+                                    <li><span className="signature-tick-services" />Mosaic Tiles & Laminated Flooring</li>
+                                    <li><span className="signature-tick-services" />Artificial Greenary & Artifacts</li>
+                                    <li><span className="signature-tick-services" />Bedsheets, Comforters, Stools and More</li>
                                 </ul>
 
-                                <div className="signature-actions">
-                                    <a className="signature-btn signature-btn-solid" href="/contact">Talk to Us</a>
-                                    <a className="signature-btn signature-btn-outline" href="tel:+917032383138">Call Now</a>
+                                <div className="signature-actions-services">
+                                    <a className="signature-btn-services signature-btn-solid-services" href="/contact">Enquire Now</a>
+                                    <a className="signature-btn-services signature-btn-outline-services" href="tel:+917032383138">Call Us</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
 
 
 
@@ -320,7 +339,7 @@ function Services() {
                                         <img src="/Images/interior2.jpg" alt="Premium interior" />
                                         <div className="showcase-new-tile-cap">
                                             <div className="showcase-new-tile-title">Premium Interiors</div>
-                                           
+
                                         </div>
                                     </article>
 
@@ -328,7 +347,7 @@ function Services() {
                                         <img src="/Images/interior6.jpg" alt="Smart layout" />
                                         <div className="showcase-new-tile-cap">
                                             <div className="showcase-new-tile-title">Smart Layout Planning</div>
-                                            
+
                                         </div>
                                     </article>
                                 </div>

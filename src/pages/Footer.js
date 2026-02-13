@@ -1,10 +1,11 @@
 import React, { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Footer.css";
 import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const navigate = useNavigate();
 
   const toggleSection = (index) => setOpenIndex(openIndex === index ? null : index);
 
@@ -20,6 +21,11 @@ const Footer = () => {
 
   const services = useMemo(() => ["Interior Works", "Interior Designs", "Ceiling Panels", "Pots"], []);
 
+  const products = useMemo(
+    () => ["Wallpapers", "Curtains", "Blinds", "PVC Panels", "Ceiling Panels", "Pots", "Artifacts", "PU Panels"],
+    []
+  );
+
   const social = useMemo(
     () => [
       { label: "Facebook", href: "https://facebook.com", icon: <FaFacebookF /> },
@@ -29,20 +35,16 @@ const Footer = () => {
     []
   );
 
-  const address =
-    "First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh";
+  const address = "First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh";
 
   const mobileSections = useMemo(
     () => [
+      { title: "Quick Links", type: "links", items: quickLinks },
+      { title: "Services", type: "text", items: services },
       {
-        title: "Quick Links",
-        type: "links",
-        items: quickLinks
-      },
-      {
-        title: "Services",
-        type: "text",
-        items: services
+        title: "Products",
+        type: "products",
+        items: products
       },
       {
         title: "Contact",
@@ -50,12 +52,22 @@ const Footer = () => {
         items: [
           { icon: <FaPhoneAlt />, label: "+91-7032383138", href: "tel:+917032383138" },
           { icon: <FaEnvelope />, label: "thehomeconcepts.11@gmail.com", href: "mailto:thehomeconcepts.11@gmail.com" },
-          { icon: <FaMapMarkerAlt />, label: address, href: "https://maps.google.com/?q=First%20Floor%2C%20Plot-30%2C%20Pedapadu%20Road%2C%20Near%20Rama%20Gedda%2C%20Srikakulam-532001%20Andhra%20Pradesh" }
+          {
+            icon: <FaMapMarkerAlt />,
+            label: address,
+            href: "https://maps.google.com/?q=First%20Floor%2C%20Plot-30%2C%20Pedapadu%20Road%2C%20Near%20Rama%20Gedda%2C%20Srikakulam-532001%20Andhra%20Pradesh"
+          }
         ]
       }
     ],
-    [address, quickLinks, services]
+    [address, quickLinks, services, products]
   );
+
+  const goToProducts = () => {
+    setOpenIndex(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/products");
+  };
 
   return (
     <footer className="footer">
@@ -63,7 +75,7 @@ const Footer = () => {
         <div className="footer-desktop">
           <div className="footer-col footer-brand">
             <div className="brand-row">
-              <img className="brand-logo" src="/Images/main-logo.png" alt="The Home Concepts" />
+              <img className="brand-logo2" src="/Images/main-logo.png" alt="The Home Concepts" />
               <div className="brand-text">
                 <h2 className="brand-title">THE HOME CONCEPTS</h2>
                 <p className="brand-subtitle">Interior works and designs</p>
@@ -95,13 +107,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="brand-social">
-              {social.map((s) => (
-                <a key={s.label} className="social-btn" href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
-                  {s.icon}
-                </a>
-              ))}
-            </div>
+           
           </div>
 
           <div className="footer-col">
@@ -129,6 +135,19 @@ const Footer = () => {
           </div>
 
           <div className="footer-col">
+            <h3 className="footer-h">Products</h3>
+            <ul className="footer-list">
+              {products.map((p) => (
+                <li key={p}>
+                  <span className="footer-text">{p}</span>
+                </li>
+              ))}
+              <li>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
             <h3 className="footer-h">What we do</h3>
             <div className="footer-card">
               <div className="card-line">
@@ -145,12 +164,20 @@ const Footer = () => {
               </div>
               <div className="card-accent" />
             </div>
+             <div className="brand-social">
+              {social.map((s) => (
+                <a key={s.label} className="social-btn" href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+                  {s.icon}
+                </a>
+              ))}
+            </div>
           </div>
+          
         </div>
 
         <div className="footer-mobile">
           <div className="mobile-top">
-            <img className="brand-logo" src="/Images/main-logo.png" alt="The Home Concepts" />
+            <img className="brand-logo2" src="/Images/main-logo.png" alt="The Home Concepts" />
             <div className="mobile-top-text">
               <div className="brand-title-sm">THE HOME CONCEPTS</div>
               <div className="brand-subtitle-sm">Interior works and designs</div>
@@ -193,10 +220,28 @@ const Footer = () => {
                     </ul>
                   )}
 
+                  {sec.type === "products" && (
+                    <ul className="footer-list">
+                      {sec.items.map((p) => (
+                        <li key={p}>
+                          <span className="footer-text">{p}</span>
+                        </li>
+                      ))}
+                      <li>
+                      </li>
+                    </ul>
+                  )}
+
                   {sec.type === "contact" && (
                     <div className="contact-stack">
                       {sec.items.map((c, i) => (
-                        <a key={i} className="footer-link" href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+                        <a
+                          key={i}
+                          className="footer-link"
+                          href={c.href}
+                          target={c.href.startsWith("http") ? "_blank" : undefined}
+                          rel="noreferrer"
+                        >
                           {c.icon}
                           <span>{c.label}</span>
                         </a>

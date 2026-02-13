@@ -1,61 +1,107 @@
 .services-wrapper {
-    background: linear-gradient(to bottom, #111, #1e1e1e);
-    padding: 0px 0px;
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
-    background-color: black !important;
-  }
-  
-  .services-hero-services {
+  background: linear-gradient(to bottom, #111, #1e1e1e);
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  background-color: black !important;
+  overflow-x: hidden;
+}
+
+.services-hero-services {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 90vh;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.services-hero-services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.78));
 }
 
 .hero-overlay-services {
-  text-align: center;
-  margin-top: -280px;
+  position: relative;
+  z-index: 2;
+  width: min(820px, 100%);
+  margin: 0 auto;
+  padding: 0 6px;
+  box-sizing: border-box;
 }
 
 .services-title-services {
-  font-size: 4.2rem;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
   background: linear-gradient(90deg, #f41515, #f80e0e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  margin: 0 0 18px;
+  line-height: 1.12;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .services-subtext-services {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: #eee;
-  max-width: 700px;
+  width: min(700px, 100%);
   margin: 0 auto;
+  line-height: 1.65;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 @media screen and (max-width: 768px) {
-  .services-title-services {
-    font-size: 2.2rem;
-  }
-
-  .services-subtext-services {
-    font-size: 1rem;
-  }
-
   .services-hero-services {
     height: auto;
-    padding: 60px 0;
+    min-height: unset;
+    padding: 84px 16px 72px;
   }
 
   .hero-overlay-services {
-    padding: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .services-title-services {
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+
+  .services-subtext-services {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 100%;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .services-hero-services {
+    padding: 74px 14px 62px;
+  }
+
+  .hero-overlay-services {
+    padding: 0 6px;
+  }
+
+  .services-title-services {
+    font-size: 1.75rem;
+  }
+
+  .services-subtext-services {
+    font-size: 0.92rem;
+  }
+}
+
 
   
 
@@ -119,7 +165,7 @@
   align-items: start;
   padding: 14px 14px;
   border-radius: 16px;
-  border: 1px solid rgba(11, 11, 11, 0.10);
+  border: 1px solid rgba(11, 11, 11, 0.1);
   background: rgba(11, 11, 11, 0.02);
 }
 
@@ -146,29 +192,9 @@
 .structure-point-desc {
   margin-top: 6px;
   font-weight: 600;
-  color: rgba(11, 11, 11, 0.70);
+  color: rgba(11, 11, 11, 0.7);
   line-height: 1.6;
   font-size: 0.95rem;
-}
-
-.structure-btn {
-  margin-top: 18px;
-  cursor: pointer;
-  border: 1px solid rgba(11, 11, 11, 0.18);
-  background: #0b0b0b;
-  color: #ffffff;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 12px 18px;
-  border-radius: 999px;
-  transition: transform 0.16s ease, background 0.16s ease, border-color 0.16s ease;
-}
-
-.structure-btn:hover {
-  transform: translateY(-1px);
-  background: #e11d2e;
-  border-color: rgba(225, 29, 46, 0.55);
 }
 
 .structure-right {
@@ -188,7 +214,7 @@
   margin: 0;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(11, 11, 11, 0.10);
+  border: 1px solid rgba(11, 11, 11, 0.1);
   background: #ffffff;
 }
 
@@ -227,11 +253,12 @@
   }
 
   .structure-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .structure-card img {
-    height: 220px;
+    height: 150px;
   }
 
   .structure-point {
@@ -246,6 +273,15 @@
   }
 }
 
+@media (max-width: 360px) {
+  .structure-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .structure-card img {
+    height: 200px;
+  }
+}
 
 
 
@@ -530,22 +566,22 @@
 
 
    /* section 4   */
-.signature {
+.signature-services {
   background: #ffffff;
   padding: 82px 20px;
 }
 
-.signature-inner {
+.signature-inner-services {
   max-width: 1240px;
   margin: 0 auto;
 }
 
-.signature-head {
+.signature-head-services {
   text-align: center;
   margin-bottom: 26px;
 }
 
-.signature-title {
+.signature-title-services {
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -554,7 +590,7 @@
   color: #0b0b0b;
 }
 
-.signature-underline {
+.signature-underline-services {
   width: 104px;
   height: 4px;
   border-radius: 999px;
@@ -562,7 +598,7 @@
   margin: 12px auto 0;
 }
 
-.signature-sub {
+.signature-sub-services {
   margin: 14px auto 0;
   max-width: 860px;
   color: rgba(11, 11, 11, 0.72);
@@ -572,7 +608,7 @@
   font-size: 1.02rem;
 }
 
-.signature-grid {
+.signature-grid-services {
   display: grid;
   grid-template-columns: 1fr 1fr 1.05fr;
   grid-template-rows: 220px 220px;
@@ -580,7 +616,7 @@
   align-items: stretch;
 }
 
-.signature-card {
+.signature-card-services {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
@@ -588,7 +624,7 @@
   background: #ffffff;
 }
 
-.signature-card img {
+.signature-card-services img {
   width: 100%;
   height: 100%;
   display: block;
@@ -597,22 +633,21 @@
   transition: transform 0.45s ease;
 }
 
-.signature-card:hover img {
+.signature-card-services:hover img {
   transform: scale(1.06);
 }
 
-.signature-cap {
+.signature-cap-services {
   position: absolute;
   left: 14px;
   bottom: 14px;
-  padding: 4px 4px;
+  padding: 6px 8px;
   border-radius: 8px;
   background: rgba(11, 11, 11, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(8px);
 }
 
-.signature-cap-title {
+.signature-cap-title-services {
   color: rgba(255, 255, 255, 0.96);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -620,15 +655,7 @@
   font-size: 12px;
 }
 
-.signature-cap-sub {
-  margin-top: 6px;
-  color: rgba(255, 255, 255, 0.86);
-  font-weight: 600;
-  line-height: 1.45;
-  font-size: 0.98rem;
-}
-
-.signature-copy {
+.signature-copy-services {
   grid-column: 3;
   grid-row: 1 / span 2;
   border-radius: 18px;
@@ -640,18 +667,18 @@
   justify-content: center;
 }
 
-.signature-copy-title {
+.signature-copy-title-services {
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #0b0b0b;
   font-size: 1.12rem;
-  position: relative;
   padding-bottom: 12px;
+  position: relative;
 }
 
-.signature-copy-title::after {
+.signature-copy-title-services::after {
   content: "";
   position: absolute;
   left: 0;
@@ -662,14 +689,14 @@
   background: #e11d2e;
 }
 
-.signature-copy-text {
+.signature-copy-text-services {
   margin: 14px 0 0;
   color: rgba(11, 11, 11, 0.72);
   font-weight: 600;
   line-height: 1.7;
 }
 
-.signature-points {
+.signature-points-services {
   list-style: none;
   padding: 0;
   margin: 16px 0 0;
@@ -677,7 +704,7 @@
   gap: 12px;
 }
 
-.signature-points li {
+.signature-points-services li {
   display: grid;
   grid-template-columns: 18px 1fr;
   gap: 10px;
@@ -687,7 +714,7 @@
   line-height: 1.6;
 }
 
-.signature-tick {
+.signature-tick-services {
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -695,14 +722,14 @@
   margin-top: 6px;
 }
 
-.signature-actions {
+.signature-actions-services {
   margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.signature-btn {
+.signature-btn-services {
   text-decoration: none;
   font-size: 14px;
   padding: 0.85em 1.25em;
@@ -710,89 +737,67 @@
   border-radius: 999px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: transform 0.16s ease, background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.signature-btn:active {
-  transform: scale(0.98);
-}
-
-.signature-btn-solid {
+.signature-btn-solid-services {
   background: #e11d2e;
   border: 1px solid #e11d2e;
   color: #ffffff;
 }
 
-.signature-btn-solid:hover {
-  background: #ff1f33;
-  border-color: #ff1f33;
-  transform: translateY(-1px);
-}
-
-.signature-btn-outline {
+.signature-btn-outline-services {
   background: transparent;
   border: 1px solid rgba(11, 11, 11, 0.22);
   color: rgba(11, 11, 11, 0.92);
 }
 
-.signature-btn-outline:hover {
-  border-color: rgba(225, 29, 46, 0.65);
-  background: rgba(225, 29, 46, 0.08);
-  transform: translateY(-1px);
-}
-
-.signature-a {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.signature-b {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.signature-c {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.signature-d {
-  grid-column: 2;
-  grid-row: 2;
-}
+.signature-a-services { grid-column: 1; grid-row: 1; }
+.signature-b-services { grid-column: 2; grid-row: 1; }
+.signature-c-services { grid-column: 1; grid-row: 2; }
+.signature-d-services { grid-column: 2; grid-row: 2; }
 
 @media (max-width: 980px) {
-  .signature-grid {
+  .signature-grid-services {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 
-  .signature-copy {
-    grid-column: 1;
+  .signature-copy-services {
+    grid-column: auto;
     grid-row: auto;
   }
 
-  .signature-card {
+  .signature-card-services {
     aspect-ratio: 16 / 10;
   }
 }
 
 @media (max-width: 520px) {
-  .signature {
+  .signature-services {
     padding: 70px 16px;
   }
 
-  .signature-copy {
-    padding: 18px 16px;
+  .signature-grid-services {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
 
-  .signature-btn {
+  .signature-copy-services {
+    grid-column: 1 / -1;
+  }
+
+  .signature-card-services {
+    aspect-ratio: 1 / 1;
+  }
+
+  .signature-btn-services {
     width: 100%;
   }
 }
+
 
 
 
