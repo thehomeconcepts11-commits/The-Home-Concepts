@@ -32,21 +32,21 @@ export default function Contact() {
             </div>
 
             <div className="contact8-cards">
-              <a className="contact8-card" href="tel:+918179197108" aria-label="Call us">
+              <a className="contact8-card" href="tel:+917032383138" aria-label="Call us">
                 <div className="contact8-card-kicker">Phone</div>
-                <div className="contact8-card-main">+91 81791 97108</div>
+                <div className="contact8-card-main">+91 70323 83138</div>
                 <div className="contact8-card-sub">Tap to call now</div>
               </a>
 
-              <a className="contact8-card" href="mailto:ganeshyadav.puli9010@gmail.com" aria-label="Email us">
+              <a className="contact8-card" href="mailto:thehomeconcepts.11@gmail.com" aria-label="Email us">
                 <div className="contact8-card-kicker">Email</div>
-                <div className="contact8-card-main">ganeshyadav.puli9010@gmail.com</div>
+                <div className="contact8-card-main">thehomeconcepts.11@gmail.com</div>
                 <div className="contact8-card-sub">Tap to email</div>
               </a>
 
               <div className="contact8-card" aria-label="Location">
                 <div className="contact8-card-kicker">Location</div>
-                <div className="contact8-card-main">Tirupathi, India</div>
+                <div className="contact8-card-main">First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh</div>
                 <div className="contact8-card-sub">Open for visits by appointment</div>
               </div>
             </div>
@@ -72,8 +72,8 @@ export default function Contact() {
                 </div>
 
                 <div className="contact8-s2-actions">
-                  <a className="contact8-btn contact8-btn-solid" href="tel:+918179197108">Call Now</a>
-                  <a className="contact8-btn contact8-btn-outline" href="mailto:ganeshyadav.puli9010@gmail.com">Email Us</a>
+                  <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">Call Now</a>
+                  <a className="contact8-btn contact8-btn-outline" href="mailto:thehomeconcepts.11@gmail.com">Email Us</a>
                 </div>
               </div>
 
@@ -276,8 +276,8 @@ export default function Contact() {
                 </div>
 
                 <div className="contact8-s7-actions">
-                  <a className="contact8-btn contact8-btn-solid" href="tel:+918179197108">Book by Call</a>
-                  <a className="contact8-btn" href="mailto:ganeshyadav.puli9010@gmail.com">Book by Email</a>
+                  <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">Book by Call</a>
+                  <a className="contact8-btn" href="mailto:thehomeconcepts.11@gmail.com">Book by Email</a>
                 </div>
               </div>
             </div>
@@ -294,8 +294,8 @@ export default function Contact() {
                 </p>
               </div>
               <div className="contact8-final-right">
-                <a className="contact8-btn contact8-btn-solid" href="tel:+918179197108">Call Now</a>
-                <a className="contact8-btn contact8-btn-outline-dark" href="mailto:ganeshyadav.puli9010@gmail.com">Email Us</a>
+                <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">Call Now</a>
+                <a className="contact8-btn contact8-btn-outline-dark" href="mailto:thehomeconcepts.11@gmail.com">Email Us</a>
               </div>
             </div>
           </div>
