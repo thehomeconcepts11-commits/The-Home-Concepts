@@ -222,11 +222,6 @@ const Footer = () => {
             <span className="mini-dot" />
             <span>© {new Date().getFullYear()} THE HOME CONCEPTS</span>
           </div>
-          <div className="footer-bottom-right">
-            <span className="tag">Black</span>
-            <span className="tag">White</span>
-            <span className="tag tag-red">Red</span>
-          </div>
         </div>
       </div>
     </footer>
