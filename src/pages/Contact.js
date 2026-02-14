@@ -1,9 +1,82 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Contact.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const formRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [phone, setPhone] = useState("");
+
+  const mapLink = "https://maps.app.goo.gl/2T2iT1VSjG3ofxmd6";
+  const address = "First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh";
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+
+  const categories = [
+    "Wallpapers",
+    "Curtains",
+    "Blinds",
+    "PVC Panels",
+    "Ceiling Panels",
+    "Pots",
+    "Artifacts",
+    "PU Panels",
+    "Mosaic Tiles",
+    "Laminated Flooring",
+    "Artificial Greenary Section",
+    "Bedsheets & Comforters",
+    "Wall Murals",
+    "Balcony Cloth Hangers",
+    "Mosquito Mesh Doors",
+    "AC Partitions",
+    "Carpets",
+    "Stools etc..."
+  ];
+
+  const handlePhoneChange = (e) => {
+    const onlyDigits = e.target.value.replace(/\D/g, "").slice(0, 10);
+    setPhone(onlyDigits);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (phone.length !== 10) {
+      alert("Please enter a valid 10 digit mobile number.");
+      return;
+    }
+
+    const now = new Date();
+    const submittedAt = now.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+
+    const timeInput = formRef.current?.querySelector('input[name="time"]');
+    const sourceInput = formRef.current?.querySelector('input[name="source"]');
+    const submittedAtInput = formRef.current?.querySelector('input[name="submitted_at"]');
+
+    if (timeInput) timeInput.value = submittedAt;
+    if (sourceInput) sourceInput.value = "Contact Page";
+    if (submittedAtInput) submittedAtInput.value = submittedAt;
+
+    setLoading(true);
+
+    emailjs
+      .sendForm("service_xj6kp6o", "template_gvzo194", formRef.current, "A3f67NO9h5O9f35Ls")
+      .then(
+        () => {
+          setLoading(false);
+          setPopupVisible(true);
+          setPhone("");
+          formRef.current?.reset();
+        },
+        () => {
+          setLoading(false);
+          alert("Failed to send. Please try again.");
+        }
+      );
+  };
+
   return (
     <div>
       <Navbar />
@@ -15,9 +88,7 @@ export default function Contact() {
           <div className="contact8-hero-content">
             <div className="contact8-hero-pill">THE HOME CONCEPTS</div>
             <h1 className="contact8-hero-title">Contact Us</h1>
-            <p className="contact8-hero-sub">
-              Call, email, or visit us, we will guide you clearly from idea to finishing.
-            </p>
+            <p className="contact8-hero-sub">Call, email, or visit us, we will guide you clearly from idea to finishing.</p>
           </div>
         </section>
 
@@ -26,9 +97,7 @@ export default function Contact() {
             <div className="contact8-head">
               <h2 className="contact8-h2">Quick Contact</h2>
               <div className="contact8-underline" />
-              <p className="contact8-p">
-                Reach out the way you prefer. We respond fast and keep the discussion simple.
-              </p>
+              <p className="contact8-p">Reach out the way you prefer. We respond fast and keep the discussion simple.</p>
             </div>
 
             <div className="contact8-cards">
@@ -46,8 +115,111 @@ export default function Contact() {
 
               <div className="contact8-card" aria-label="Location">
                 <div className="contact8-card-kicker">Location</div>
-                <div className="contact8-card-main">First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh</div>
+                <div className="contact8-card-main">{address}</div>
                 <div className="contact8-card-sub">Open for visits by appointment</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact8-s9" aria-label="Send message and map">
+          <div className="contact8-container">
+            <div className="contact8-head">
+              <h2 className="contact8-h2">Send a Message</h2>
+              <div className="contact8-underline" />
+              <p className="contact8-p">Share your details and we will contact you quickly.</p>
+            </div>
+
+            <div className="contact8-formmap">
+              <div className="contact8-formwrap">
+                <form ref={formRef} onSubmit={handleSubmit} className="contact8-form">
+                  <input type="hidden" name="time" />
+                  <input type="hidden" name="source" />
+                  <input type="hidden" name="submitted_at" />
+
+                  <div className="contact8-form-row">
+                    <div className="contact8-field">
+                      <label className="contact8-label">Name</label>
+                      <input className="contact8-input" name="name" type="text" placeholder="Enter your name" required />
+                    </div>
+                    <div className="contact8-field">
+                      <label className="contact8-label">Phone</label>
+                      <input
+                        className="contact8-input"
+                        name="phone"
+                        type="tel"
+                        value={phone}
+                        onChange={handlePhoneChange}
+                        placeholder="Enter 10 digit mobile number"
+                        maxLength={10}
+                        pattern="[0-9]{10}"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="contact8-form-row">
+                    <div className="contact8-field">
+                      <label className="contact8-label">Email</label>
+                      <input className="contact8-input" name="email" type="email" placeholder="Enter your email" required />
+                    </div>
+                    <div className="contact8-field">
+                      <label className="contact8-label">Subject</label>
+                      <input className="contact8-input" name="title" type="text" placeholder="Eg: Wallpaper quote" required />
+                    </div>
+                  </div>
+
+                  <div className="contact8-field">
+                    <label className="contact8-label">Category</label>
+                    <select className="contact8-input" name="category" defaultValue="" required>
+                      <option value="" disabled>
+                        Select a category
+                      </option>
+                      {categories.map((c) => (
+                        <option key={c} value={c}>
+                          {c}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="contact8-field">
+                    <label className="contact8-label">Message</label>
+                    <textarea className="contact8-textarea" name="message" rows="5" placeholder="Tell us what you need" required />
+                  </div>
+
+                  <button type="submit" className="contact8-submit" disabled={loading}>
+                    {loading ? "Sending..." : "Submit"}
+                  </button>
+                </form>
+
+                {popupVisible && (
+                  <div className="contact8-popup">
+                    <div className="contact8-popup-inner">
+                      <h3 className="contact8-popup-title">Submitted Successfully</h3>
+                      <p className="contact8-popup-text">Thank you. We will contact you soon.</p>
+                      <button className="contact8-popup-btn" onClick={() => setPopupVisible(false)}>
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="contact8-mapwrap" aria-label="Google map">
+                <iframe
+                  title="The Home Concepts Location"
+                  src={mapEmbedSrc}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+                <a className="contact8-maplink" href={mapLink} target="_blank" rel="noreferrer">
+                  Open in Google Maps
+                </a>
               </div>
             </div>
           </div>
@@ -72,8 +244,12 @@ export default function Contact() {
                 </div>
 
                 <div className="contact8-s2-actions">
-                  <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">Call Now</a>
-                  <a className="contact8-btn contact8-btn-outline" href="mailto:thehomeconcepts.11@gmail.com">Email Us</a>
+                  <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">
+                    Call Now
+                  </a>
+                  <a className="contact8-btn contact8-btn-outline" href="mailto:thehomeconcepts.11@gmail.com">
+                    Email Us
+                  </a>
                 </div>
               </div>
 
@@ -111,9 +287,7 @@ export default function Contact() {
               <div className="contact8-s3-card">
                 <h2 className="contact8-h2">Visit Us</h2>
                 <div className="contact8-underline" />
-                <p className="contact8-p">
-                  Prefer face-to-face? Visit us for a short discussion and a quick plan.
-                </p>
+                <p className="contact8-p">Prefer face-to-face? Visit us for a short discussion and a quick plan.</p>
 
                 <div className="contact8-info">
                   <div className="contact8-info-row">
@@ -143,9 +317,7 @@ export default function Contact() {
             <div className="contact8-head contact8-head-invert">
               <h2 className="contact8-h2 contact8-h2-invert">Project Flow</h2>
               <div className="contact8-underline contact8-underline-invert" />
-              <p className="contact8-p contact8-p-invert">
-                A simple step-by-step flow so you always know what is next.
-              </p>
+              <p className="contact8-p contact8-p-invert">A simple step-by-step flow so you always know what is next.</p>
             </div>
 
             <div className="contact8-steps">
@@ -184,20 +356,34 @@ export default function Contact() {
               <div className="contact8-s5-copy">
                 <h2 className="contact8-h2">Why People Contact Us</h2>
                 <div className="contact8-underline" />
-                <p className="contact8-p">
-                  We keep things clear and practical, from the first call to final finishing.
-                </p>
+                <p className="contact8-p">We keep things clear and practical, from the first call to final finishing.</p>
 
                 <ul className="contact8-list">
-                  <li><span className="contact8-bullet" />Guidance on interiors and finishing</li>
-                  <li><span className="contact8-bullet" />Quick site visit planning</li>
-                  <li><span className="contact8-bullet" />Material and design suggestions</li>
-                  <li><span className="contact8-bullet" />Clear timelines and updates</li>
+                  <li>
+                    <span className="contact8-bullet" />
+                    Guidance on interiors and finishing
+                  </li>
+                  <li>
+                    <span className="contact8-bullet" />
+                    Quick site visit planning
+                  </li>
+                  <li>
+                    <span className="contact8-bullet" />
+                    Material and design suggestions
+                  </li>
+                  <li>
+                    <span className="contact8-bullet" />
+                    Clear timelines and updates
+                  </li>
                 </ul>
 
                 <div className="contact8-s5-actions">
-                  <a className="contact8-btn contact8-btn-solid" href="/services">Explore Services</a>
-                  <a className="contact8-btn" href="tel:+918179197108">Call Now</a>
+                  <a className="contact8-btn contact8-btn-solid" href="/services">
+                    Explore Services
+                  </a>
+                  <a className="contact8-btn" href="tel:+918179197108">
+                    Call Now
+                  </a>
                 </div>
               </div>
 
@@ -221,9 +407,7 @@ export default function Contact() {
             <div className="contact8-head contact8-head-invert">
               <h2 className="contact8-h2 contact8-h2-invert">Quick Stats</h2>
               <div className="contact8-underline contact8-underline-invert" />
-              <p className="contact8-p contact8-p-invert">
-                A small snapshot of how we work and what we focus on.
-              </p>
+              <p className="contact8-p contact8-p-invert">A small snapshot of how we work and what we focus on.</p>
             </div>
 
             <div className="contact8-stats">
@@ -256,9 +440,7 @@ export default function Contact() {
               <div className="contact8-s7-card">
                 <h2 className="contact8-h2">Free Consultation</h2>
                 <div className="contact8-underline" />
-                <p className="contact8-p">
-                  Want a quick plan? We can discuss your space, your needs, and the best design approach.
-                </p>
+                <p className="contact8-p">Want a quick plan? We can discuss your space, your needs, and the best design approach.</p>
 
                 <div className="contact8-minirows">
                   <div className="contact8-minirow">
@@ -276,8 +458,12 @@ export default function Contact() {
                 </div>
 
                 <div className="contact8-s7-actions">
-                  <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">Book by Call</a>
-                  <a className="contact8-btn" href="mailto:thehomeconcepts.11@gmail.com">Book by Email</a>
+                  <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">
+                    Book by Call
+                  </a>
+                  <a className="contact8-btn" href="mailto:thehomeconcepts.11@gmail.com">
+                    Book by Email
+                  </a>
                 </div>
               </div>
             </div>
@@ -289,13 +475,15 @@ export default function Contact() {
             <div className="contact8-final">
               <div className="contact8-final-left">
                 <h2 className="contact8-final-title">Let’s Start Your Work</h2>
-                <p className="contact8-final-sub">
-                  Call now for quick guidance and the next steps.
-                </p>
+                <p className="contact8-final-sub">Call now for quick guidance and the next steps.</p>
               </div>
               <div className="contact8-final-right">
-                <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">Call Now</a>
-                <a className="contact8-btn contact8-btn-outline-dark" href="mailto:thehomeconcepts.11@gmail.com">Email Us</a>
+                <a className="contact8-btn contact8-btn-solid" href="tel:+917032383138">
+                  Call Now
+                </a>
+                <a className="contact8-btn contact8-btn-outline-dark" href="mailto:thehomeconcepts.11@gmail.com">
+                  Email Us
+                </a>
               </div>
             </div>
           </div>
