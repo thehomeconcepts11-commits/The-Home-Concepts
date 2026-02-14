@@ -234,6 +234,7 @@
 
 .footer-more {
   appearance: none;
+  background: transparent;
 }
 
 .footer-card {
