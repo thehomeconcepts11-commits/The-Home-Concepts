@@ -43,48 +43,374 @@ function HomePage() {
         </section>
 
 
-        <section className="showcase" aria-label="Project highlights">
-          <div className="showcase-inner">
-            <div className="showcase-head">
-              <h2 className="showcase-title">Signature Spaces</h2>
-              <p className="showcase-desc">Crafted interiors that feel timeless, bold, personal.</p>
+        <section className="showcase" aria-label="The Home Concepts offerings">
+  <div className="showcase-inner">
+    <div className="showcase-head">
+      <h2 className="showcase-title">Crafted for Every Corner</h2>
+      <p className="showcase-desc">
+        From walls to floors, from soft furnishings to functional upgrades, we design spaces that feel premium and personal.
+      </p>
+    </div>
+
+    <div className="showcase-grid">
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/wallpaper1.jpg" alt="Wallpapers" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Wallpapers</div>
+            <div className="showcase-badge-sub">Textures that change the mood</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/home-curtain2.jpg" alt="Curtains" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Curtains</div>
+            <div className="showcase-badge-sub">Soft luxury, perfect fall</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/blind3.jpg" alt="Blinds" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Blinds</div>
+            <div className="showcase-badge-sub">Light control, clean finish</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/ceiling-panel1.jpg" alt="Ceiling Panels" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Ceiling Panels</div>
+            <div className="showcase-badge-sub">A premium look from above</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/pu-panel2.jpg" alt="PU Panels" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">PU Panels</div>
+            <div className="showcase-badge-sub">Bold walls, sculpted style</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/mosiac-tiles2.jpg" alt="Mosaic Tiles" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Mosaic Tiles</div>
+            <div className="showcase-badge-sub">Details that steal attention</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/laminated-flooring3.jpg" alt="Laminated Flooring" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Laminated Flooring</div>
+            <div className="showcase-badge-sub">Warmth under every step</div>
+          </div>
+        </div>
+      </article>
+
+      <article className="showcase-card">
+        <div className="showcase-media">
+          <img className="showcase-img" src="/Images/products/artificial-greenary-section1.jpg" alt="Artificial Greenery" />
+          <div className="showcase-shade" />
+          <div className="showcase-topline" />
+          <div className="showcase-badge">
+            <div className="showcase-badge-title">Artificial Greenery</div>
+            <div className="showcase-badge-sub">Fresh vibes, zero effort</div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div className="showcase-cta" aria-label="Explore services">
+      <div className="showcase-cta-line" />
+      <p className="showcase-cta-text">
+        Want more? We also do PVC panels, wall murals, mosquito mesh doors, carpets, pots, artifacts, and more.
+      </p>
+      <a className="showcase-cta-btn" href="/products" aria-label="View all categories">
+        View All Categories
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section className="categorywall" aria-label="The Home Concepts categories">
+  <div className="categorywall-inner">
+    <div className="categorywall-left">
+      <div className="categorywall-kicker">The Home Concepts</div>
+      <h2 className="categorywall-title">Everything you need to build a premium space</h2>
+      <p className="categorywall-sub">
+        Pick a category, explore options, and let us turn your idea into a finished look. Clean, bold, and built to last.
+      </p>
+
+      <div className="categorywall-metrics" aria-label="Highlights">
+        <div className="categorywall-metric">
+          <div className="categorywall-num">18+</div>
+          <div className="categorywall-label">Categories</div>
+        </div>
+        <div className="categorywall-metric">
+          <div className="categorywall-num">100%</div>
+          <div className="categorywall-label">Custom Fit</div>
+        </div>
+        <div className="categorywall-metric">
+          <div className="categorywall-num">0</div>
+          <div className="categorywall-label">Compromise</div>
+        </div>
+      </div>
+
+      <a className="categorywall-btn" href="/products" aria-label="Explore all categories">
+        Explore Categories
+        <span className="categorywall-btn-dot" aria-hidden="true" />
+      </a>
+    </div>
+
+    <div className="categorywall-right" aria-label="Category list">
+      <a className="categorywall-pill" href="/products#wallpapers">Wallpapers</a>
+      <a className="categorywall-pill" href="/products#curtains">Curtains</a>
+      <a className="categorywall-pill" href="/products#blinds">Blinds</a>
+      <a className="categorywall-pill" href="/products#pvc-panels">PVC Panels</a>
+      <a className="categorywall-pill" href="/products#ceiling-panels">Ceiling Panels</a>
+      <a className="categorywall-pill" href="/products#pots">Pots</a>
+      <a className="categorywall-pill" href="/products#artifacts">Artifacts</a>
+      <a className="categorywall-pill" href="/products#pu-panels">PU Panels</a>
+      <a className="categorywall-pill" href="/products#mosaic-tiles">Mosaic Tiles</a>
+      <a className="categorywall-pill" href="/products#laminated-flooring">Laminated Flooring</a>
+      <a className="categorywall-pill" href="/products#artificial-greenary-section">Artificial Greenery</a>
+      <a className="categorywall-pill" href="/products#bedsheets-comforters">Bedsheets & Comforters</a>
+      <a className="categorywall-pill" href="/products#wall-murals">Wall Murals</a>
+      <a className="categorywall-pill" href="/products#balcony-cloth-hangers">Balcony Cloth Hangers</a>
+      <a className="categorywall-pill" href="/products#mosquito-mesh-doors">Mosquito Mesh Doors</a>
+      <a className="categorywall-pill" href="/products#ac-partitions">AC Partitions</a>
+      <a className="categorywall-pill" href="/products#carpets">Carpets</a>
+      <a className="categorywall-pill" href="/products#stools">Stools etc.</a>
+    </div>
+  </div>
+
+  <div className="categorywall-frame" aria-hidden="true" />
+</section>
+
+
+
+
+<section className="studio" aria-label="Category studio preview">
+  <div className="studio-inner">
+    <div className="studio-head">
+      <h2 className="studio-title">Category Studio</h2>
+      <p className="studio-sub">
+        Tap a category to preview the vibe. Premium materials, clean finishing, and a sharp look in every corner.
+      </p>
+    </div>
+
+    <div className="studio-shell" aria-label="Studio selector">
+      {/* Controls (no JS, pure CSS switching) */}
+      <input className="studio-radio" type="radio" name="studio" id="st-wallpapers" defaultChecked />
+      <input className="studio-radio" type="radio" name="studio" id="st-curtains" />
+      <input className="studio-radio" type="radio" name="studio" id="st-blinds" />
+      <input className="studio-radio" type="radio" name="studio" id="st-panels" />
+      <input className="studio-radio" type="radio" name="studio" id="st-flooring" />
+      <input className="studio-radio" type="radio" name="studio" id="st-greenery" />
+
+      <div className="studio-grid">
+        {/* Left selector */}
+        <div className="studio-left" aria-label="Choose a category">
+          <div className="studio-note">
+            <span className="studio-note-dot" aria-hidden="true" />
+            Pick a category
+          </div>
+
+          <label className="studio-tab" htmlFor="st-wallpapers">
+            <span className="studio-tab-title">Wallpapers</span>
+            <span className="studio-tab-sub">Texture, depth, statement walls</span>
+          </label>
+
+          <label className="studio-tab" htmlFor="st-curtains">
+            <span className="studio-tab-title">Curtains</span>
+            <span className="studio-tab-sub">Soft luxury, perfect fall</span>
+          </label>
+
+          <label className="studio-tab" htmlFor="st-blinds">
+            <span className="studio-tab-title">Blinds</span>
+            <span className="studio-tab-sub">Light control, clean lines</span>
+          </label>
+
+          <label className="studio-tab" htmlFor="st-panels">
+            <span className="studio-tab-title">PU Panels</span>
+            <span className="studio-tab-sub">Bold surfaces, premium finish</span>
+          </label>
+
+          <label className="studio-tab" htmlFor="st-flooring">
+            <span className="studio-tab-title">Laminated Flooring</span>
+            <span className="studio-tab-sub">Warm, durable, elegant</span>
+          </label>
+
+          <label className="studio-tab" htmlFor="st-greenery">
+            <span className="studio-tab-title">Artificial Greenery</span>
+            <span className="studio-tab-sub">Fresh look, zero maintenance</span>
+          </label>
+
+          <div className="studio-cta">
+            <a className="studio-btn" href="/products" aria-label="View all categories">
+              View All Categories
+            </a>
+            
+          </div>
+        </div>
+
+        {/* Right preview */}
+        <div className="studio-right" aria-label="Preview">
+          {/* Wallpapers */}
+          <div className="studio-panel p-wallpapers" role="group" aria-label="Wallpapers preview">
+            <div className="studio-media">
+              <img src="/Images/products/wallpaper4.jpg" alt="Wallpapers preview" className="studio-img" />
+              <div className="studio-shade" />
+              <div className="studio-chip">Wallpapers</div>
+              <div className="studio-caption">
+                <div className="studio-caption-title">Make the first impression</div>
+                <div className="studio-caption-sub">Patterns that feel premium, not loud.</div>
+              </div>
             </div>
 
-            <div className="showcase-grid">
-              <article className="showcase-card">
-                <div className="showcase-media">
-                  <img className="showcase-img" src="/Images/part1.avif" alt="Modern Family Residence" />
-                  <div className="showcase-shade" />
-                  <div className="showcase-badge">Modern Family Residence</div>
-                </div>
-              </article>
-
-              <article className="showcase-card">
-                <div className="showcase-media">
-                  <img className="showcase-img" src="/Images/part2.avif" alt="Exclusive Residential Villa" />
-                  <div className="showcase-shade" />
-                  <div className="showcase-badge">Exclusive Residential Villa</div>
-                </div>
-              </article>
-
-              <article className="showcase-card">
-                <div className="showcase-media">
-                  <img className="showcase-img" src="/Images/part3.avif" alt="Premium Office Space" />
-                  <div className="showcase-shade" />
-                  <div className="showcase-badge">Premium Office Space</div>
-                </div>
-              </article>
-
-              <article className="showcase-card">
-                <div className="showcase-media">
-                  <img className="showcase-img" src="/Images/part4.avif" alt="Urban Apartment Living" />
-                  <div className="showcase-shade" />
-                  <div className="showcase-badge">Urban Apartment Living</div>
-                </div>
-              </article>
+            <div className="studio-mini">
+              <img src="/Images/products/wallpaper1.jpg" alt="Wallpaper sample 1" />
+              <img src="/Images/products/wallpaper2.jpg" alt="Wallpaper sample 2" />
+              <img src="/Images/products/wallpaper3.jpg" alt="Wallpaper sample 3" />
             </div>
           </div>
-        </section>
+
+          {/* Curtains */}
+          <div className="studio-panel p-curtains" role="group" aria-label="Curtains preview">
+            <div className="studio-media">
+              <img src="/Images/products/home-curtain3.jpg" alt="Curtains preview" className="studio-img" />
+              <div className="studio-shade" />
+              <div className="studio-chip">Curtains</div>
+              <div className="studio-caption">
+                <div className="studio-caption-title">Softness with structure</div>
+                <div className="studio-caption-sub">Fall, folds, and clean finishing.</div>
+              </div>
+            </div>
+
+            <div className="studio-mini">
+              <img src="/Images/products/home-curtain1.jpg" alt="Curtain sample 1" />
+              <img src="/Images/products/home-curtain2.jpg" alt="Curtain sample 2" />
+              <img src="/Images/products/home-curtain4.jpg" alt="Curtain sample 3" />
+            </div>
+          </div>
+
+          {/* Blinds */}
+          <div className="studio-panel p-blinds" role="group" aria-label="Blinds preview">
+            <div className="studio-media">
+              <img src="/Images/products/blind4.jpg" alt="Blinds preview" className="studio-img" />
+              <div className="studio-shade" />
+              <div className="studio-chip">Blinds</div>
+              <div className="studio-caption">
+                <div className="studio-caption-title">Control light, keep it elegant</div>
+                <div className="studio-caption-sub">Minimal look, maximum comfort.</div>
+              </div>
+            </div>
+
+            <div className="studio-mini">
+              <img src="/Images/products/blind1.jpg" alt="Blind sample 1" />
+              <img src="/Images/products/blind2.jpg" alt="Blind sample 2" />
+              <img src="/Images/products/blind3.jpg" alt="Blind sample 3" />
+            </div>
+          </div>
+
+          {/* PU Panels */}
+          <div className="studio-panel p-panels" role="group" aria-label="PU Panels preview">
+            <div className="studio-media">
+              <img src="/Images/products/pu-panel4.jpg" alt="PU panels preview" className="studio-img" />
+              <div className="studio-shade" />
+              <div className="studio-chip">PU Panels</div>
+              <div className="studio-caption">
+                <div className="studio-caption-title">Walls with depth</div>
+                <div className="studio-caption-sub">A premium upgrade in minutes.</div>
+              </div>
+            </div>
+
+            <div className="studio-mini">
+              <img src="/Images/products/pu-panel1.jpg" alt="PU sample 1" />
+              <img src="/Images/products/pu-panel2.jpg" alt="PU sample 2" />
+              <img src="/Images/products/pu-panel3.jpg" alt="PU sample 3" />
+            </div>
+          </div>
+
+          {/* Flooring */}
+          <div className="studio-panel p-flooring" role="group" aria-label="Flooring preview">
+            <div className="studio-media">
+              <img src="/Images/products/laminated-flooring4.jpg" alt="Flooring preview" className="studio-img" />
+              <div className="studio-shade" />
+              <div className="studio-chip">Laminated Flooring</div>
+              <div className="studio-caption">
+                <div className="studio-caption-title">Warmth under every step</div>
+                <div className="studio-caption-sub">Durable, clean, and premium.</div>
+              </div>
+            </div>
+
+            <div className="studio-mini">
+              <img src="/Images/products/laminated-flooring1.jpg" alt="Flooring sample 1" />
+              <img src="/Images/products/laminated-flooring2.jpg" alt="Flooring sample 2" />
+              <img src="/Images/products/laminated-flooring3.jpg" alt="Flooring sample 3" />
+            </div>
+          </div>
+
+          {/* Greenery */}
+          <div className="studio-panel p-greenery" role="group" aria-label="Greenery preview">
+            <div className="studio-media">
+              <img src="/Images/products/artificial-greenary-section4.jpg" alt="Artificial greenery preview" className="studio-img" />
+              <div className="studio-shade" />
+              <div className="studio-chip">Artificial Greenery</div>
+              <div className="studio-caption">
+                <div className="studio-caption-title">Make spaces feel alive</div>
+                <div className="studio-caption-sub">Fresh look with zero maintenance.</div>
+              </div>
+            </div>
+
+            <div className="studio-mini">
+              <img src="/Images/products/artificial-greenary-section1.jpg" alt="Greenery sample 1" />
+              <img src="/Images/products/artificial-greenary-section2.jpg" alt="Greenery sample 2" />
+              <img src="/Images/products/artificial-greenary-section3.jpg" alt="Greenery sample 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
         <section className="home-section2">
           <h2 className="home-section2-title">Discover Our Finest Home Design Collections</h2>
