@@ -292,7 +292,7 @@ export default function Contact() {
                 <div className="contact8-info">
                   <div className="contact8-info-row">
                     <div className="contact8-info-label">City</div>
-                    <div className="contact8-info-val">Tirupathi, India</div>
+                    <div className="contact8-info-val">Srikakulam, India</div>
                   </div>
                   <div className="contact8-info-row">
                     <div className="contact8-info-label">Best Time</div>
