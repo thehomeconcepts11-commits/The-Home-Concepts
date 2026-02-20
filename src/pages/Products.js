@@ -71,7 +71,7 @@ function Products() {
           },
           {
             title: "Exterior Blinds",
-            options: [{ label: "Chick/PVC Blinds", key: "blinds-chick-pvc", images: ["blinds-chick-pvc1.jpg", "blinds-chick-pvc2.jpg", "blinds-chick-pvc3.jpg", "blinds-chick-pvc4.jpg"] }]
+            options: [{ label: "Chick/PVC Blinds", key: "blinds-chick-pvc", images: ["chick-blind1.webp", "chick-blind2.jpeg", "chick-blind3.jpg", "chick-blind4.jpeg"] }]
           }
         ]
       },
