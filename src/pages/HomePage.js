@@ -390,7 +390,7 @@ function HomePage() {
                   {/* Greenery */}
                   <div className="studio-panel p-greenery" role="group" aria-label="Greenery preview">
                     <div className="studio-media">
-                      <img src="/Images/products/artificial-greenary-section4.jpg" alt="Artificial greenery preview" className="studio-img" />
+                      <img src="/Images/products/greenary-vertical-garden2.jpg" alt="Artificial greenery preview" className="studio-img" />
                       <div className="studio-shade" />
                       <div className="studio-chip">Artificial Greenery</div>
                       <div className="studio-caption">
@@ -400,9 +400,9 @@ function HomePage() {
                     </div>
 
                     <div className="studio-mini">
-                      <img src="/Images/products/artificial-greenary-section1.jpg" alt="Greenery sample 1" />
-                      <img src="/Images/products/artificial-greenary-section2.jpg" alt="Greenery sample 2" />
-                      <img src="/Images/products/artificial-greenary-section3.jpg" alt="Greenery sample 3" />
+                      <img src="/Images/products/greenary-artificial-grass1.jpg" alt="Greenery sample 1" />
+                      <img src="/Images/products/greenary-artificial-plants3.jpg" alt="Greenery sample 2" />
+                      <img src="/Images/products/greenary-creepers-veils1.jpg" alt="Greenery sample 3" />
                     </div>
                   </div>
                 </div>
