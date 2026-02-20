@@ -116,7 +116,7 @@ function HomePage() {
 
               <article className="showcase-card">
                 <div className="showcase-media">
-                  <img className="showcase-img" src="/Images/products/mosiac-tiles2.jpg" alt="Mosaic Tiles" />
+                  <img className="showcase-img" src="/Images/products/mosaic-tiles1.webp" alt="Mosaic Tiles" />
                   <div className="showcase-shade" />
                   <div className="showcase-topline" />
                   <div className="showcase-badge">
