@@ -140,7 +140,7 @@ function HomePage() {
 
               <article className="showcase-card">
                 <div className="showcase-media">
-                  <img className="showcase-img" src="/Images/products/artificial-greenary-section1.jpg" alt="Artificial Greenery" />
+                  <img className="showcase-img" src="/Images/products/greenary-vertical-garden2.jpg" alt="Artificial Greenery" />
                   <div className="showcase-shade" />
                   <div className="showcase-topline" />
                   <div className="showcase-badge">
