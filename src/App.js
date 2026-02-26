@@ -5,10 +5,12 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
+import Whatsapp from "./pages/Whatsapp";
 
 function App() {
   return (
     <Router>
+      <Whatsapp />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<Services />} />

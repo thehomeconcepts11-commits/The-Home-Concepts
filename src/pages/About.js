@@ -223,7 +223,7 @@ export default function About() {
                 <h2 className="about8-h2">Address</h2>
                 <div className="about8-underline" />
                 <p className="about8-p">
-                  First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001, Andhra Pradesh
+                  Plot-30, Upstairs of The Sofa Store, Near SBI Ramalaxmana Branch, Vishaka A Colony, Peddapadu Road, Srikakulam, Andhra Pradesh - 532001
                 </p>
 
                 <div className="about8-mapline">

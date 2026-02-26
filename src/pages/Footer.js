@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Footer.css";
-import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -19,7 +19,7 @@ const Footer = () => {
     []
   );
 
-  const services = useMemo(() => ["Interior Works", "Interior Designs", "Ceiling Panels", "Pots"], []);
+  const services = useMemo(() => ["Interior Works", "Interior Designs", "Ceiling Panels", "Installation"], []);
 
   const products = useMemo(
     () => ["Wallpapers", "Curtains", "Blinds", "PVC Panels", "Ceiling Panels", "Pots", "Artifacts", "PU Panels"],
@@ -28,14 +28,14 @@ const Footer = () => {
 
   const social = useMemo(
     () => [
-      { label: "Facebook", href: "https://facebook.com", icon: <FaFacebookF /> },
-      { label: "Instagram", href: "https://instagram.com", icon: <FaInstagram /> },
-      { label: "Twitter", href: "https://twitter.com", icon: <FaTwitter /> }
+      { label: "Facebook", href: "https://www.facebook.com/share/1Dcrb8TBey/?mibextid=wwXIfr", icon: <FaFacebookF /> },
+      { label: "Instagram", href: "https://www.instagram.com/the_home_concepts?igsh=MWYxbjdtZDdsOG5tMw%3D%3D&utm_source=qr", icon: <FaInstagram /> },
+      { label: "YouTube", href: "https://youtube.com/@thehomeconcepts?si=M3xQ0098lErZrQlO", icon: <FaYoutube />}
     ],
     []
   );
 
-  const address = "First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh";
+  const address = "Plot-30, Upstairs of The Sofa Store, Near SBI Ramalaxmana Branch, Vishaka A Colony, Peddapadu Road, Srikakulam, Andhra Pradesh - 532001";
 
   const goToProducts = () => {
     setOpenIndex(null);

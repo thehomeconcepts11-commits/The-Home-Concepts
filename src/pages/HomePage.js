@@ -470,7 +470,7 @@ function HomePage() {
                   </div>
                   <div className="visit-card-point">
                     <span className="visit-card-dot" />
-                    <span className="visit-card-point-text">Consultation for tiles, granite, and interiors</span>
+                    <span className="visit-card-point-text">Consultation for  Interiors and  Design</span>
                   </div>
                 </div>
 
@@ -507,9 +507,9 @@ function HomePage() {
             </div>
 
             <div className="grid-item grid-text">
-              <h4 className="grid-kicker">Premium Surfaces</h4>
+              <h4 className="grid-kicker">Premium Interiors</h4>
               <p className="grid-copy">
-                Curated marble and granite selections, matched with clean finishing standards for dependable, long term results.
+                Thoughtfully designed interior spaces, combining aesthetics and functionality with high-quality materials and flawless finishing for lasting impressions.
               </p>
             </div>
 

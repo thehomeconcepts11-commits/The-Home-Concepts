@@ -11,7 +11,7 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
 
   const mapLink = "https://maps.app.goo.gl/2T2iT1VSjG3ofxmd6";
-  const address = "First Floor, Plot-30, Pedapadu Road, Near Rama Gedda, Srikakulam-532001 Andhra Pradesh";
+  const address = "Plot-30, Upstairs of The Sofa Store, Near SBI Ramalaxmana Branch, Vishaka A Colony, Peddapadu Road, Srikakulam, Andhra Pradesh - 532001";
   const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
   const categories = [
