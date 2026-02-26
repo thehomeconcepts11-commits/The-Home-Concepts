@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Footer.css";
-import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const [openIndex, setOpenIndex] = useState(null);
